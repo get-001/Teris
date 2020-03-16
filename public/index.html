@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>俄罗斯方块</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+      }
+      #root {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        margin: 0 auto;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+      #root > #panel {
+        position: relative;
+        background: #000;
+      }
+      #root > #panel > .msg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: aqua;
+        font-weight: 600;
+        font-size: 30px;
+        padding: 15px 20px;
+        background-color: rgb(255, 104, 104);
+        border: 2px solid #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        z-index: 100;
+        display: none;
+      }
+      #root > #tip {
+        margin: 5px;
+      }
+      #root > #tip > .score {
+        position: relative;
+        font-weight: 600;
+        text-align: center;
+        font-size: 30px;
+        padding: 10px;
+        color: #555;
+      }
+      #root > #tip > .next {
+        position: relative;
+        /* background: #555; */
+      }
+      #root > #tip > .hint {
+        position: relative;
+        padding: 20px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root">
+      <div id="panel">
+        <span class="msg"></span>
+      </div>
+      <div id="tip">
+        <div class="next"></div>
+        <div class="score"></div>
+        <div class="hint">
+          <p
+            style="text-align:center;font-weight:600;color:burlywood;font-size:20px;margin-bottom:20px;"
+          >
+            俄罗斯方块·项目练习
+          </p>
+          <p style="padding-left:10px;line-height:30px;">操作：</p>
+          <p style="padding-left:10px;line-height:30px;">← ↓ → 控制方向</p>
+          <p style="padding-left:10px;line-height:30px;">
+            回车键：开始/暂停/恢复
+          </p>
+          <p style="padding-left:10px;line-height:30px;">空格键：旋转方块</p>
+        </div>
+      </div>
+    </div>
+    <script src="../src/index.js"></script>
+  </body>
+</html>
